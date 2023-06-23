@@ -14,11 +14,17 @@
       <p>
         {{ fullName() }}
       </p>
+      <p>
+        {{ age }}
+      </p>
       <hr>
+      <button type="button" @click="increment">Increment</button>
+      <button type="button" @click="age--">Decrement</button>
+      <br>
       <label>First name</label>
       <input type="text" v-model="firstName" />
       <label>Last name</label>
-      <input type="text" v-model="lastName" />
+      <input type="text" :value="lastName" @input="updateLastName" />
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
