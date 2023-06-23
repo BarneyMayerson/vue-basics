@@ -24,7 +24,11 @@
       <label>First name</label>
       <input type="text" v-model="firstName" />
       <label>Last name</label>
-      <input type="text" :value="lastName" @input="updateLastName" />
+      <input 
+        type="text" 
+        :value="lastName" 
+        @input="updateLastName('Last name event triggered!', $event)" 
+      />
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
