@@ -18,11 +18,13 @@
         {{ age }}
       </p>
       <hr>
+      <label>Age</label>
+      <input type="number" v-model.number="age" />
       <button type="button" @click="increment">Increment</button>
       <button type="button" @click="age--">Decrement</button>
-      <br>
+      <br><br>
       <label>First name</label>
-      <input type="text" v-model="firstName" />
+      <input type="text" v-model.lazy.trim="firstName" />
       <label>Middle name</label>
       <input type="text" @keyup.enter="updateMiddleName" />
       <label>Last name</label>
