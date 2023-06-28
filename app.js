@@ -10,6 +10,10 @@ let vm = Vue.createApp({
     computed: {
         circleClasses() {
             return { purple: this.isPurple };
+        },
+
+        circleStyles() {
+            return { width: this.size + 'px', height: this.size + 'px', lineHeight: this.size + 'px' };
         }
     }
 }).mount('#app')
